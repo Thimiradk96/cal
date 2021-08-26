@@ -1,0 +1,67 @@
+<html>
+   <head>
+       <link rel="stylesheet" type="text/css" href="cal-style.css"/>
+   <title>Javascript</title>
+       <script>
+           function Thimira(currentValue){
+           //alert(currentValue);
+           if(currentValue=='C'){
+               document.forms[0].display_box.value='';
+           }else if(currentValue=='='){
+           document.forms[0].display_box.value=eval(document.forms[0].display_box.value); 
+           
+           }else{
+           //document.forms[0].display_box.value=currentValue;
+               document.forms[0].display_box.value=document.forms[0].display_box.value.concat(currentValue);
+           }
+           }
+           
+       </script>    
+    </head>
+    <body>
+   <h1>Javascript calculator</h1>
+        
+    <form action="thanks.php" method="get">
+     <table>
+        <tr>
+            <td><input type="display_box" id="display_box" required class="cal-display"></td>
+         </tr> 
+         <tr>
+             <td>
+             <input type="button" id="btn7" name="btn7" value="7" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn8" name="btn8" value="8" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn9" name="btn9" value="9" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btnMinus" name="btnMinus" value="-" onclick="Thimira(this.value)" class="cal-button cal-button-func">
+             </td>
+         </tr>
+         <tr>
+              <td>
+             <input type="button" id="btn4" name="btn4" value="4" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn5" name="btn5" value="5" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn6" name="btn6" value="6" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btnMulti" name="btnMulti" value="*" onclick="Thimira(this.value)" class="cal-button cal-button-func">
+             </td>
+         </tr>
+         <tr>
+              <td>
+             <input type="button" id="btn1" name="btn1" value="1" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn2" name="btn2" value="2" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btn3" name="btn3" value="3" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btnDiv" name="btnDiv" value="/" onclick="Thimira(this.value)" class="cal-button cal-button-func">
+             </td>
+         </tr> 
+        <tr>
+              <td>
+             <input type="button" id="btnC" name="btnC" value="0" onclick="Thimira(this.value)" class="cal-button">
+             <input type="button" id="btnEquel" name="btnEquel" value="=" onclick="Thimira(this.value)" class="cal-button cal-button-func">
+             <input type="button" id="btnPlus" name="btnPlus" value="+" onclick="Thimira(this.value)" class="cal-button cal-button-func">
+             <input type="button" id="btnClear" name="btnClear" value="C" onclick="Thimira(this.value)" class="cal-button cal-button-clear">
+             </td>
+         </tr> 
+         
+     </table>  
+
+</form>
+            
+    </body>
+        </html>
